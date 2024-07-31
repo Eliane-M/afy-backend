@@ -5,7 +5,7 @@ from rest_framework import status
 from agri.models import *
 from agri.serializers import *
 from api.authentication.auth import verify_user
-from authentication.permissions.permission import IsEmployer
+from authentication.permissions.permissions import IsEmployer
 
 
 

@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from agri.models import Category
 from agri.serializers import CategorySerializer
-from authentication.permissions.permission import IsEmployer
+from authentication.permissions.permissions import IsEmployer
 
 
 @api_view(['GET'])

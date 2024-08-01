@@ -11,7 +11,7 @@ def educational_resources_list(request):
     if request.method == 'GET':
         educational_resources = EducationalResources.objects.all()
         serializer = EducationalResourcesSerializer(educational_resources, many=True)
-        return Response({"educational resources": serializer.data}, status=status.HTTP_200_OK)
+        return Response({"educational_resources": serializer.data}, status=status.HTTP_200_OK)
     else:
         return Response({"error": "Only GET method is allowed."}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
     

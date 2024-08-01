@@ -41,7 +41,7 @@ from base.emails.templates.password_reset import reset_password_template
 def reset_email_password(recipient_email,username, code):
     subject = 'Reset Password'
     data = {'username':username, 'code': code}
-    html_body = reset_password_template.format(employee_name=username, code=code)
+    html_body = reset_password_template.format(username=username, code=code)
 
     send_email(
         recipient_email= recipient_email,
@@ -54,7 +54,7 @@ from base.emails.templates.new_account import register_user_template
 def new_account_email(recipient_email, username):
     subject = 'New account created'
     data = {'username':username}
-    html_body = register_user_template.format(client_name=username)
+    html_body = register_user_template.format(username=username)
 
     send_email(
         recipient_email=recipient_email,

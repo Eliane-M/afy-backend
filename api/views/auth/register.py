@@ -36,17 +36,17 @@ def new_user(request):
                 password=make_password(password)
             )
             print(user)
-            # if user is not None:
-            #     try:
-            #         AccountEmail.objects.create(
-            #             email = user.email,
-            #         )
-            #         print("account email created")
-            #         new_account_email(user.email, user.first_name)
-            #     except Exception as e:
-            #         return Response({"error":f"Error sending email: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-            # else:
-            #     return Response({"error":"Failed to send confirmation email"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            if user is not None:
+                try:
+                    AccountEmail.objects.create(
+                        email = user.email,
+                    )
+                    print("account email created")
+                    new_account_email(user.email, user.first_name)
+                except Exception as e:
+                    return Response({"error":f"Error sending email: {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            else:
+                return Response({"error":"Failed to send confirmation email"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
             user_info = UserSerializer(user).data
             return Response(user_info, status=status.HTTP_201_CREATED)

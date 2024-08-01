@@ -13,11 +13,11 @@ reset_password_template = """
 <tr>
     <td style="padding: 20px;">
         <p>Dear {username},</p>
-        <p>You have requested to reset your password for your CSR Canteen account.</p>
+        <p>You have requested to reset your password for your Agriculture For Youth account.</p>
         <p>Your One-Time Password (OTP) for password reset is: <strong>{code}</strong></p>
         <p>If you did not request this password reset, please ignore this email or contact our support team immediately.</p>
         <p>Thank you.</p>
-        <p>Best regards,<br/> CSR Canteen Team</p>
+        <p>Best regards,<br/> Agriculture For Youth Team</p>
     </td>
 </tr>
 </table>

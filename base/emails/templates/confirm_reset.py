@@ -15,8 +15,8 @@ confirm_reset_template = """
         <p>Dear {username},</p>
         <p>Your password was successfully changed as you requested.</p>
         <p>If you did not request for your password to be changed, contact us immediately to keep your account safe.</p>
-        <p>Thank you for using CSR Canteen</p>
-        <p>Best regards,<br/> CSR Canteen Team</p>
+        <p>Thank you for using Agriculture For Youth</p>
+        <p>Best regards,<br/> Agriculture For Youth Team</p>
     </td>
 </tr>
 </table>

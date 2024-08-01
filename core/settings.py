@@ -20,7 +20,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 SERVER_API_TOKEN = os.getenv("SERVER_API_TOKEN")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
@@ -234,4 +234,4 @@ SIMPLE_JWT = {
 EMAIL_BACKEND = "postmark.django_backend.EmailBackend"
 DEFAULT_FROM_EMAIL = os.getenv("MAIN_EMAIL")
 EMAIL_SERVER_TOKEN = os.getenv("EMAIL_SERVER_TOKEN")
-POSTMARK_API_KEY = "71ea7071-405c-4aca-a8ef-af027f336584"
+POSTMARK_API_KEY = os.getenv("POSTMARK_API_KEY")

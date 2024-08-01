@@ -14,7 +14,7 @@ def joblisting_list(request):
     if request.method == 'GET':
         joblistings = Joblisting.objects.all()
         serializer = JoblistingSerializer(joblistings, many=True)
-        return Response({"job listing": serializer.data}, status=status.HTTP_200_OK)
+        return Response({"job_listing": serializer.data}, status=status.HTTP_200_OK)
     else:
         return Response({"error": "Invalid request method"}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
     

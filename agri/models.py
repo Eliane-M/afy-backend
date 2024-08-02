@@ -11,6 +11,7 @@ class Account(BaseModel):
     def __str__(self):
         return str(self.user.first_name)
     
+# class AccountImage
 
 class AccountEmail(models.Model):
     email = models.EmailField(max_length=255)
@@ -73,6 +74,7 @@ class EducationalResources(BaseModel):
     # title = models.CharField(max_length=255)
     content = models.TextField(max_length=1000)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='courses_images/', blank=True, null=True, editable=True)
 
     def __str__(self):
         return str(self.name)

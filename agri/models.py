@@ -78,7 +78,7 @@ class EducationalResources(BaseModel):
     hours = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return str(self.name) + str(self.content)
+        return str(self.name)
 
 
 class SkillAssessment(BaseModel):

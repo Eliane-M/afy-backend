@@ -75,9 +75,10 @@ class EducationalResources(BaseModel):
     content = models.TextField(max_length=1000)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='courses_images/', blank=True, null=True, editable=True)
+    hours = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
-        return str(self.name)
+        return str(self.name) + str(self.content)
 
 
 class SkillAssessment(BaseModel):

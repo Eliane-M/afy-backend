@@ -22,7 +22,7 @@ SERVER_API_TOKEN = os.getenv("SERVER_API_TOKEN")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://agriculture-for-youth-o50f.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 
 # Application definition

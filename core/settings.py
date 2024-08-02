@@ -57,7 +57,6 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
-    "https://agriculture-for-youth-o50f.onrender.com",
 ]
 
 CORS_ALLOW_HEADERS = [

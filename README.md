@@ -34,22 +34,22 @@ We welcome contributions :) To contribute:
    - Open your VS Code
    - Open a new terminal
    - Run
-     `### git clone https://github.com/Eliane-M/afy-backend.git`
+     `git clone https://github.com/Eliane-M/afy-backend.git`
    - Navigate to the cloned directory by running
-     `### cd agriculture-for-youth`
+     `cd agriculture-for-youth`
 3) Create a new branch:
    - Run
-     `### git checkout -b suggestions_branch`
+     `git checkout -b suggestions_branch`
 4) Make your changes:
    - Implement the changes you want to make to the file or any bug fix.
    - Ensure your code follows the project's coding standards and passes all tests.
 5) Commit your changes:
    - Run the command to stage your changes
-     `### git add .`
+     `git add .`
    - Then run the command to commit the changes
-     `### git commit -m 'Added some features'`
+     `git commit -m 'Added some features'`
    - Push the changes to your branch
-     `### git push origin suggestions_branch`
+     `git push origin suggestions_branch`
 6) Open a pull request for me to view your suggested changes:
    - Navigate to the original repository on github
    - click the "Pull Requests" button

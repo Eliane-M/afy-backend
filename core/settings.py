@@ -22,7 +22,7 @@ SERVER_API_TOKEN = os.getenv("SERVER_API_TOKEN")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "agriculture-for-youth-o50f.onrender.com"]
 
 
 # Application definition
@@ -57,6 +57,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
+    "https://agriculture-for-youth-o50f.onrender.com",
 ]
 
 CORS_ALLOW_HEADERS = [

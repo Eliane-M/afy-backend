@@ -23,7 +23,7 @@ SERVER_API_TOKEN = os.getenv("SERVER_API_TOKEN")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "agriculture-for-youth-o50f.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "agriculture-for-youth-o50f.onrender.com", 'https://sfy-frontend-app.vercel.app']
 
 
 # Application definition
@@ -59,6 +59,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
     "https://agriculture-for-youth-o50f.onrender.com",
+    'https://sfy-frontend-app.vercel.app',
 ]
 
 CORS_ALLOW_HEADERS = [
@@ -109,12 +110,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 if PRODUCTION:
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=os.getenv("DATABASE_URL"),
-            # ssl_require=os.getenv("DATABASE_SSL_REQUIRE", "true").lower() == "true",
-        )
+    DATABASES = DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            "NAME": os.getenv("DB_NAME"),
+            "USER": os.getenv("DB_USERNAME"),
+            "PASSWORD": os.getenv("DB_PASSWORD"),
+            "HOST": os.getenv("DB_HOST"),
+            "PORT": os.getenv("DB_PORT"),
+        }
     }
+
 
 else:
     DATABASES = {

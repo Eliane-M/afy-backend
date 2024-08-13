@@ -1,6 +1,7 @@
 from datetime import timedelta
 from pathlib import Path
 import os
+import dj_database_url
 from dotenv import load_dotenv
 from firebase_admin import credentials
 
@@ -109,14 +110,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 if PRODUCTION:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            "NAME": os.getenv("DB_NAME"),
-            "USER": os.getenv("DB_USERNAME"),
-            "PASSWORD": os.getenv("DB_PASSWORD"),
-            "HOST": os.getenv("DB_HOST"),
-            "PORT": os.getenv("DB_PORT"),
-        }
+        'default': dj_database_url.config(
+            default=os.getenv("DATABASE_URL"),
+            # ssl_require=os.getenv("DATABASE_SSL_REQUIRE", "true").lower() == "true",
+        )
     }
 
 else:
